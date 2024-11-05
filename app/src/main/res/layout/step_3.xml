@@ -6,68 +6,80 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="150dp"
         android:background="@drawable/back"
-        android:padding="5dp"
-        android:src="@drawable/spoti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spoti" />
+
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textSize="18sp"
         android:text="Ничего себе ты большой, целых ... лет\n Какого ты пола?"
-        android:textColor="@color/white"
-        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <RadioButton
-        android:id="@+id/radiobutton"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/SexChoice"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/white"
-        android:layout_marginRight="200dp"
-        android:text="Мужского"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:textColor="#0099ff"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <RadioButton
-        android:id="@+id/radiobutton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="200dp"
-        android:textColor="@color/white"
-        android:text="Женского"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radiobutton" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:checked="true"
+            android:onClick="onStepEmail"
+            android:text="Мужского"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="Женского"
+            android:textColor="@color/white" />
+    </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="300dp"
+        android:id="@+id/appCompatButton"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/back"
-        android:onClick="onStep4"
+        android:onClick="onStepEmail"
         android:text="Продолжить"
-        android:textAllCaps="false"
-        android:textColor="#0099FF"
+        android:textColor="#0099ff"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radiobutton2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
